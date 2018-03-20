@@ -1,8 +1,8 @@
 class Test < ApplicationRecord
-  def self.tests_by_category(cat)
+  def self.title_by_category(category_title)
     Test.joins('JOIN categories
     ON tests.category_id = categories.id').
-    where(categories: { title: cat }).
-    order('tests.title DESC')
+    where(categories: { title: category_title }).
+    order('tests.title DESC').pluck(:title)
   end
 end

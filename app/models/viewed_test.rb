@@ -1,2 +1,0 @@
-class ViewedTest < ApplicationRecord
-end
