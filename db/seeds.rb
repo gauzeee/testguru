@@ -33,7 +33,7 @@ Answer.create([
   { body: 'English', question_id: questions[5].id },
   { body: 'JavaScript', correct: true, question_id: questions[5].id }])
 
-user = User.create([
+User.create([
   { name: 'user1'},
   { name: 'user2'}])
 
