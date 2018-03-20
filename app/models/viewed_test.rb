@@ -1,0 +1,2 @@
+class ViewedTest < ApplicationRecord
+end
