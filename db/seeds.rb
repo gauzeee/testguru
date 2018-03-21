@@ -34,8 +34,8 @@ Answer.create!([
   { body: 'JavaScript', correct: true, question_id: questions[5].id }])
 
 User.create!([
-  { name: 'user1'},
-  { name: 'user2'}])
+  { name: 'admin'},
+  { name: 'user1'}])
 
 TestPassage.create!([
   {user_id: 1, test_id: 1},
