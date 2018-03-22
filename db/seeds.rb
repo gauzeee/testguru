@@ -3,13 +3,17 @@ categories = Category.create!([
   { title: 'Backend'},
   { title: 'Frameworks' }])
 
+users = User.create!([
+  { name: 'admin'},
+  { name: 'user1'}])
+
 tests = Test.create!([
   { title: 'HTML', category_id: categories[0].id },
   { title: 'CSS', category_id: categories[0].id },
   { title: 'Ruby', level: 2, category_id: categories[1].id },
   { title: 'Swift', level: 1, category_id: categories[1].id },
   { title: 'Rails', level: 3, category_id: categories[2].id },
-  { title: 'Node', level: 2, category_id: categories[2].id }])
+  { title: 'Node', level: 2, category_id: categories[2].id, author_id: 2 }])
 
 questions = Question.create!([
   { body: 'Is HTML for web?', test_id: tests[0].id },
@@ -32,10 +36,6 @@ Answer.create!([
   { body: 'Ruby`s framework', correct: true, question_id: questions[4].id },
   { body: 'English', question_id: questions[5].id },
   { body: 'JavaScript', correct: true, question_id: questions[5].id }])
-
-User.create!([
-  { name: 'admin'},
-  { name: 'user1'}])
 
 TestPassage.create!([
   {user_id: 1, test_id: 1},
