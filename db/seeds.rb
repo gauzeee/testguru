@@ -8,12 +8,12 @@ users = User.create!([
   { name: 'user1'}])
 
 tests = Test.create!([
-  { title: 'HTML', category_id: categories[0].id },
-  { title: 'CSS', category_id: categories[0].id },
-  { title: 'Ruby', level: 2, category_id: categories[1].id },
-  { title: 'Swift', level: 1, category_id: categories[1].id },
-  { title: 'Rails', level: 3, category_id: categories[2].id },
-  { title: 'Node', level: 2, category_id: categories[2].id, author_id: 2 }])
+  { title: 'HTML', category_id: categories[0].id, author_id: users[0].id },
+  { title: 'CSS', category_id: categories[0].id, author_id: users[0].id },
+  { title: 'Ruby', level: 2, category_id: categories[1].id, author_id: users[0].id },
+  { title: 'Swift', level: 1, category_id: categories[1].id, author_id: users[0].id },
+  { title: 'Rails', level: 3, category_id: categories[2].id, author_id: users[0].id },
+  { title: 'Node', level: 2, category_id: categories[2].id, author_id: users[1].id }])
 
 questions = Question.create!([
   { body: 'Is HTML for web?', test_id: tests[0].id },
