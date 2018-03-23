@@ -4,8 +4,8 @@ categories = Category.create!([
   { title: 'Frameworks' }])
 
 users = User.create!([
-  { name: 'admin'},
-  { name: 'user1'}])
+  { name: 'admin', email: 'admin@testguru.test'},
+  { name: 'user1', email: 'user1@testguru.test'}])
 
 tests = Test.create!([
   { title: 'HTML', category_id: categories[0].id, author_id: users[0].id },
