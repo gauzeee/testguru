@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>New question</title>
+</head>
+<body>
+  <div style="width: 400px; margin-left: 25%; background-color: #afafaf; text-align: center; border: 2px solid #000; ">
+    <h1>Create new question</h1>
+    <h2>for <%= Test.find(params[:test_id]).title %> test</h2>
+    <form action="/tests/<%= params[:test_id] %>/questions" method="POST">
+      <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+      <p>Body of new question</p>
+      <textarea style="width: 80%; height: 50px; border: 1px solid #000;" type="text" name="question[body]"></textarea>
+      <br>
+      <button style="margin-top: 20px; margin-bottom: 20px;" type="submit">Create question</button>
+    </form>
+  </div>
+</body>
+</html>
