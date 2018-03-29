@@ -7,8 +7,8 @@
 <body>
   <div style="width: 400px; margin-left: 25%; background-color: #afafaf; text-align: center; border: 2px solid #000; ">
     <h1>Create new question</h1>
-    <h2>for <%= Test.find(params[:test_id]).title %> test</h2>
-    <form action="/tests/<%= params[:test_id] %>/questions" method="POST">
+    <h2>for <%= @test.title %> test</h2>
+    <form action="/tests/<%= @test.id %>/questions" method="POST">
       <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
       <p>Body of new question</p>
       <textarea style="width: 80%; height: 50px; border: 1px solid #000;" type="text" name="question[body]"></textarea>
