@@ -1,14 +1,15 @@
+<h1><%= @question.test.title %></h1>
 <p>
-  <h3>Body:</h3>
   <%= @question.body %>
 </p>
-<p>
-  <h3>Test title:</h3>
-  <%= @question.test.title %>
-</p>
+
+<h2>Answers</h2>
+
+<%= link_to 'New answer', new_question_answer_path(@question) %>
+
+<ol>
+  <%= render @question.answers %>
+</ol>
+
+<%= link_to 'Edit', edit_question_path(@question) %> |
 <%= link_to 'Back', test_path(@question.test) %>
-<%= link_to 'Edit', edit_question_path(@question) %>
-<%= link_to 'Delete',
-            question_path(@question),
-            method: :delete,
-            data: { confirm: 'Are you sure?' } %>

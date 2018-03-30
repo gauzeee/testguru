@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180323101331) do
+ActiveRecord::Schema.define(version: 20180330134138) do
 
   create_table "answers", force: :cascade do |t|
     t.string "body", null: false
@@ -36,21 +36,26 @@ ActiveRecord::Schema.define(version: 20180323101331) do
   end
 
   create_table "test_passages", force: :cascade do |t|
-    t.integer "user_id"
     t.integer "test_id"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "current_question"
+    t.integer "correct_questions", default: 0
+    t.integer "current_question_number", default: 0
+    t.integer "current_question_id"
+    t.index ["current_question_id"], name: "index_test_passages_on_current_question_id"
     t.index ["test_id"], name: "index_test_passages_on_test_id"
     t.index ["user_id"], name: "index_test_passages_on_user_id"
   end
 
   create_table "tests", force: :cascade do |t|
     t.string "title", null: false
-    t.integer "level", default: 0
+    t.integer "level"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "category_id"
-    t.integer "author_id"
+    t.integer "author_id", default: 1
     t.index ["author_id"], name: "index_tests_on_author_id"
     t.index ["category_id"], name: "index_tests_on_category_id"
   end
