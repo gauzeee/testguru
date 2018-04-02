@@ -1,0 +1,12 @@
+<h1>Test <%= @test_passage.test.title %> finished</h1>
+
+<p>
+  <b>Result</b>
+  <b class="<%= result_view(@test_passage) %>">
+    <%= @test_passage.result_points %> % <br>
+    <%= text(@test_passage) %>
+  </b>
+</p>
+<p>
+  <%= link_to 'Tests', tests_path %>
+</p>

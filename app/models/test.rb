@@ -3,7 +3,7 @@ class Test < ApplicationRecord
   has_many :test_passages
   has_many :users, through: :test_passages
   belongs_to :category
-  belongs_to :author, class_name: "User", foreign_key: "author_id"
+  belongs_to :author, class_name: 'User', foreign_key: :author_id
 
   validates :title, presence: true, uniqueness: { scope: :level }
   validates :level, numericality: { only_integer: true,
