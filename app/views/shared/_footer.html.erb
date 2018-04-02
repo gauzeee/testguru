@@ -1,7 +1,11 @@
 <footer>
   <hr>
-  Created by A. Rzhevsky
-  <%= current_year %>
-  <%= github_url('gauzeee', 'testguru') %>
-  <%= link_to 'Учебный проект в онлайн-школе Thinknetica', 'http://thinknetica.com/', target: '_blank' %>
+<div class="footer-content">
+  <div class="creator">Created by A. Rzhevsky</div>
+  <div class="year"><%= current_year %></div>
+  <div class="links">
+    <%= github_url('gauzeee', 'testguru') %>
+    <%= link_to 'Учебный проект в онлайн-школе Thinknetica', 'http://thinknetica.com/', target: '_blank' %>
+  </div>
+</div>
 </footer>
