@@ -7,7 +7,9 @@ module ApplicationHelper
     link_to 'GitHub', "https://github.com/#{author}/#{repo}", target: '_blank'
   end
 
-  def flash_text(action)
-    content_tag(:p, flash[action], class: "flash #{action}") if flash[action]
+  def flash_alerts
+    massages = ''
+    flash.each { |key, value| massages << content_tag(:p, value, class: "flash #{key}") }
+    massages.html_safe
   end
 end
