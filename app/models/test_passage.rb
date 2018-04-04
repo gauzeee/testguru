@@ -31,7 +31,7 @@ class TestPassage < ApplicationRecord
   end
 
   def correct_answers
-    current_question.answers.correct
+    self.current_question.answers.correct
   end
 
   def set_question

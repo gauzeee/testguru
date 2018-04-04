@@ -14,7 +14,8 @@ class User < ApplicationRecord
 
   EMAIL_FORMAT = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
 
-  validates :name, presence: true
+  validates :first_name, presence: true
+  validates :last_name, presence: true
   validates :email, format: EMAIL_FORMAT, uniqueness: true
 
   scope :tests_by_level, -> (level) { joins(:test_passages).
