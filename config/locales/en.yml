@@ -79,13 +79,26 @@ en:
         title: "Title"
         level: "Level"
         category_id: "Category"
+      answer:
+        body: "Body:"
+        correct: "Correct?"
+      question:
+        body: "Body:"
     submit:
       test:
         create: "Create test"
         update: "Update test"
+      answer:
+        create: "Create answer"
+        update: "Update answer"
+      question:
+        create: "Create question"
+        update: "Update question"
     select:
       prompt: "Please, select"
   test_passages:
+    show:
+      header: "You passind %{title} Test Now"
     result:
       header: "Test %{title} was complited"
       result: "Result"
@@ -112,6 +125,7 @@ en:
   label:
     answer: "Answers:"
     correct: "Correct:"
+    questions: "Question:"
 
 
 

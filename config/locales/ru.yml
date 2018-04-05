@@ -68,6 +68,8 @@ ru:
     select:
       prompt: "Выберите"
   test_passages:
+    show:
+      header: "Сейчас вы проходите %{title} тест"
     result:
       header: "Тест %{title} успешно завершен"
       result: "Ваш результат"
@@ -94,3 +96,4 @@ ru:
   label:
     answer: "Ответы:"
     correct: "Верный ответ?"
+    questions: "Вопрос:"
