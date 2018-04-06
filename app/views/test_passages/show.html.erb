@@ -1,7 +1,7 @@
-<h1>Passing <%= @test_passage.test.title %> test</h1>
+<h1><%= t('.header', title: @test_passage.test.title) %></h1>
 
 <p>
-<b>Question:</b>
+<b><%= t('label.questions') %></b>
 <p>
   <%= @test_passage.current_question_number %>
   of

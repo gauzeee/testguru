@@ -30,4 +30,102 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  hello: "Welcome"
+  tests:
+    index:
+      header: "Tests"
+      title: "Title"
+      level: "Level"
+      category: "Category"
+      questions: "Questions"
+      actions: "Start"
+  shared:
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+  admin:
+    tests:
+      create:
+        success: "Test was successfully created"
+      index:
+        header: "Edit tests"
+        title: "Title"
+        level: "Level"
+        category: "Category"
+        questions: "Questions"
+        actions: "Actions"
+    new:
+      header: "Create new Test"
+    edit:
+      header: "Edit %{title} Test"
+    answers:
+      edit:
+        header: "Edit answer"
+      new:
+        header: "New Answer"
+      show:
+        header: "Answers"
+  helpers:
+    label:
+      user:
+        first_name: "First Name"
+        last_name: "Last Name"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password confirmation"
+        remember_me: "Remember me"
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+      answer:
+        body: "Body:"
+        correct: "Correct?"
+      question:
+        body: "Body:"
+    submit:
+      test:
+        create: "Create test"
+        update: "Update test"
+      answer:
+        create: "Create answer"
+        update: "Update answer"
+      question:
+        create: "Create question"
+        update: "Update question"
+    select:
+      prompt: "Please, select"
+  test_passages:
+    show:
+      header: "You passind %{title} Test Now"
+    result:
+      header: "Test %{title} was complited"
+      result: "Result"
+  tests_mailer:
+    completed_test:
+      subject: "You just completed the test."
+  test_passage:
+    fail: "Test failed"
+    pass: "Test passed"
+  links:
+    back: "Back"
+    edit: "Edit"
+    delete: "Delete"
+    show: "Show"
+    confirm: "Are you sure?"
+    new_answer: "Create new Answer"
+    new_test: "Create new Test"
+    new_question: "Create new Question"
+    start: "Go!"
+    logout: "Logout"
+    sign_in: "Sign in"
+    sign_up: "Sign up"
+    tests: "Back to Tests"
+  label:
+    answer: "Answers:"
+    correct: "Correct:"
+    questions: "Question:"
+
+
+

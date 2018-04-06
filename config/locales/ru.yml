@@ -1,2 +1,99 @@
 ru:
-  hello: "Привет, Мир!"
+  hello: "Привет"
+  tests:
+    index:
+      header: "Доступные тесты"
+      title: "Название"
+      level: "Уровень"
+      category: "Категория"
+      questions: "Вопросы"
+      actions: "Вы готовы?"
+  shared:
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружена %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+  admin:
+    tests:
+      create:
+        success: "Тест успешно создан"
+      index:
+        header: "Редактировать тесты"
+        title: "Название"
+        level: "Уровень"
+        category: "Категория"
+        questions: "Вопросы"
+        actions: "Действия"
+      new:
+        header: "Создать Тест"
+      edit:
+        header: "Изменить тест: %{title}"
+    answers:
+      edit:
+        header: "Изменить ответ"
+      new:
+        header: "Новый ответ"
+      show:
+        header: "Ответы"
+  helpers:
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+      user:
+        first_name: "Имя"
+        last_name: "Фамилия"
+        email: "Адрес Email"
+        password: "Пароль"
+        password_confirmation: "Подтвердите Пароль"
+        remember_me: "Запомнить"
+      answer:
+        body: "Текст ответа:"
+        correct: "Ответ верный?"
+      question:
+        body: "Тескт вопроса:"
+    submit:
+      test:
+        create: "Создать тест"
+        update: "Обновить тест"
+      answer:
+        create: "Добавить ответ"
+        update: "Изменить ответ"
+      question:
+        create: "Добавить вопрос"
+        update: "Изменить вопрос"
+    select:
+      prompt: "Выберите"
+  test_passages:
+    show:
+      header: "Сейчас вы проходите %{title} тест"
+    result:
+      header: "Тест %{title} успешно завершен"
+      result: "Ваш результат"
+    tests_mailer:
+    completed_test:
+      subject: "Вы только что заврешили тест"
+  test_passage:
+    fail: "Тест не пройден"
+    pass: "Тест пройден"
+  links:
+    back: "Назад"
+    edit: "Изменить"
+    delete: "Удалить"
+    show: "Просмотр"
+    confirm: "Вы уверены?"
+    new_answer: "Создать Ответ"
+    new_test: "Создать Тест"
+    new_question: "Создать Вопрос"
+    start: "Начать!"
+    logout: "Выйти"
+    sign_in: "Войти"
+    sign_up: "Регистрация"
+    tests: "К списку Тестов"
+  label:
+    answer: "Ответы:"
+    correct: "Верный ответ?"
+    questions: "Вопрос:"
