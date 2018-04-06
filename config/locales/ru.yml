@@ -93,7 +93,13 @@ ru:
     sign_in: "Войти"
     sign_up: "Регистрация"
     tests: "К списку Тестов"
+    admin_panel: "Панель администратора"
   label:
     answer: "Ответы:"
     correct: "Верный ответ?"
     questions: "Вопрос:"
+    remember_me: "Запомнить меня"
+    minpass: "Не менее %{length} символов"
+    of: "из"
+  placeholder:
+    email: "Введите Email"

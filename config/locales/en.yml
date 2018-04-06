@@ -122,10 +122,15 @@ en:
     sign_in: "Sign in"
     sign_up: "Sign up"
     tests: "Back to Tests"
+    admin_panel: "Admin Panel"
   label:
     answer: "Answers:"
     correct: "Correct:"
     questions: "Question:"
-
+    remember_me: "Remember me"
+    minpass: "%{length} characters minimum"
+    of: "of"
+  placeholder:
+    email: "Enter Email"
 
 

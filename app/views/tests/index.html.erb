@@ -1,13 +1,21 @@
-<h1><%= t('.header') %></h1>
+<div class="row justify-content-center">
+  <div class="col-12 col-md-8 user-tests-table">
+    <h1><%= t('.header') %></h1>
 
-<table>
-  <tr>
-    <th><%= t('.title') %></th>
-    <th><%= t('.level') %></th>
-    <th><%= t('.category') %></th>
-    <th><%= t('.questions') %></th>
-    <th><%= t('.actions') %></th>
-  </tr>
+    <table class="table table-hover">
+      <thead class="thead-inverse">
+        <tr>
+          <th><%= t('.title') %></th>
+          <th><%= t('.level') %></th>
+          <th><%= t('.category') %></th>
+          <th><%= t('.questions') %></th>
+          <th><%= t('.actions') %></th>
+        </tr>
+      </thead>
 
-  <%= render @tests %>
-</table>
+    <tbody>
+      <%= render @tests %>
+    </tbody>
+    </table>
+  </div>
+</div>
