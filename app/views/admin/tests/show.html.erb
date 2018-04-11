@@ -1,14 +1,15 @@
-<p>
-  <h3><%= t('tests.index.title') %>:</h3>
-  <%= @test.title %>
+<div class="row justify-content-center">
+  <div class="col-12 col-md-8">
+    <p>
+  <h3><%= t('tests.index.title') %>:  <%= @test.title %></h3>
+
 </p>
 
 <p>
-  <h3><%= t('tests.index.level') %></h3>
-  <%= @test.level %>
+  <h3><%= t('tests.index.level') %>:  <%= @test.level %></h3>
 </p>
 
-<table>
+<table class="table">
   <tr>
     <h3><%= t('tests.index.questions') %> :</h3>
   </tr>
@@ -17,5 +18,7 @@
       <%= render partial: 'admin/questions/question', collection: @test.questions %>
     </ol></tr>
 </table>
-<%= link_to t('links.new_question'), new_admin_test_question_path(@test) %> <br>
-<%= link_to t('links.back'), admin_tests_path %>
+<%= link_to t('links.new_question'), new_admin_test_question_path(@test), class: 'btn btn-primary' %> <br>
+<%= link_to t('links.back'), admin_tests_path, class: 'btn' %>
+  </div>
+</div>

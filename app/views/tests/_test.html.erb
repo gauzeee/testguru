@@ -4,5 +4,5 @@
   <td><%= test.category.title %></td>
   <td><%= test.questions.size %></td>
 
-  <td><%= button_to t('links.start'), start_test_path(test) %></td>
+  <td><%= button_to t('links.start'), start_test_path(test), class: 'btn btn-primary' %></td>
 </tr>

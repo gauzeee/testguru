@@ -1,11 +1,17 @@
-<footer>
+
   <hr>
-<div class="footer-content">
-  <div class="creator">Created by A. Rzhevsky</div>
-  <div class="year"><%= current_year %></div>
-  <div class="links">
-    <%= github_url('gauzeee', 'testguru') %>
-    <%= link_to 'Учебный проект в онлайн-школе Thinknetica', 'http://thinknetica.com/', target: '_blank' %>
+<div class="container-fluid footer">
+  <div class="row justify-content-center">
+    <div class="col-md-6">Created by A. Rzhevsky</div>
+    <div class="col-md-6">
+      <%= github_url('gauzeee', 'testguru') %> |
+      <%= link_to 'Учебный проект в онлайн-школе Thinknetica', 'http://thinknetica.com/', target: '_blank' %>
+    </div>
   </div>
-</div>
-</footer>
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-8">
+      <%= current_year %>
+    </div>
+    </div>
+  </div>
+

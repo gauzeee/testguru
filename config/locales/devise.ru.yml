@@ -70,5 +70,6 @@ ru:
       not_found: "не найдена"
       not_locked: "не заблокирована"
       not_saved:
-        one: "%{resource}: сохранение не удалось из-за %{count} ошибки"
-        other: "%{resource}: сохранение не удалось из-за %{count} ошибки"
+        one: "Обнаружена %{count} ошибка"
+        other: "Обанаружено %{count} ошибок"
+        many: "Обанаружено %{count} ошибок"
