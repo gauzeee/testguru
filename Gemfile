@@ -5,7 +5,6 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.5'
 # Use sqlite3 as the database for Active Record
@@ -33,6 +32,12 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise', '~> 4.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+#NETWORKING
+
+gem 'octokit', '~> 4.0'
+gem 'faraday'
+
 #LOCALIZTION
 gem 'rails-i18n', '~> 5.0.0'
 
@@ -42,6 +47,7 @@ gem 'jquery-rails'
 gem 'bootstrap', '~> 4.0.0'
 
 group :development, :test do
+  gem 'dotenv-rails'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver

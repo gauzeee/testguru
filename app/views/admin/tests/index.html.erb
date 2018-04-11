@@ -3,6 +3,10 @@
     <h1> <%= t('.header') %></h1>
 
     <p>
+      <%= link_to t('links.gists'), admin_gists_path, class: 'btn btn-primary' %>
+    </p>
+
+    <p>
       <%= link_to t('links.new_test'), new_admin_test_path, class: 'btn btn-primary' %>
     </p>
 

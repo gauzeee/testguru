@@ -25,7 +25,11 @@
       <% end %>
 
       <p>
-        <%= form.submit class: 'btn btn-primary mt-3' %>
+        <%= link_to t('gist.button'), gist_test_passage_path(@test_passage), method: :post, class: 'btn btn-primary mt-5' %>
+      </p>
+
+      <p>
+        <%= form.submit t('.send'), class: 'btn btn-primary mt-1' %>
       </p>
       <% end %>
     </div>
