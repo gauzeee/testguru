@@ -1,0 +1,19 @@
+<div class="row justify-content-center">
+  <div class="col-12 col-md-8 tests-table">
+    <table class="table">
+      <thead>
+        <tr>
+          <th><%= t('gist.question') %></th>
+          <th><%= t('gist.link') %></th>
+          <th><%= t('gist.creator') %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render @gists %>
+      </tbody>
+    </table>
+    <p>
+    <%= link_to t('links.back'), admin_tests_path, class: 'btn btn-primary' %>
+  </p>
+  </div>
+</div>

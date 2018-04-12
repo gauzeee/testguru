@@ -99,6 +99,7 @@ en:
   test_passages:
     show:
       header: "You passind %{title} Test Now"
+      send: "Send Answer(s)"
     result:
       header: "Test %{title} was complited"
       result: "Result"
@@ -123,6 +124,7 @@ en:
     sign_up: "Sign up"
     tests: "Back to Tests"
     admin_panel: "Admin Panel"
+    gists: "Show Gists"
   label:
     answer: "Answers:"
     correct: "Correct:"
@@ -132,5 +134,9 @@ en:
     of: "of"
   placeholder:
     email: "Enter Email"
-
+  gist:
+    description: "A question about %{title} from TestGuru"
+    success: "Gist %{link} successfully saved"
+    failure: "An error occured while saving gist"
+    link: "Gist Question"
 

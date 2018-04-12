@@ -70,6 +70,7 @@ ru:
   test_passages:
     show:
       header: "Сейчас вы проходите %{title} тест"
+      send: "Ответить"
     result:
       header: "Тест %{title} успешно завершен"
       result: "Ваш результат"
@@ -94,6 +95,7 @@ ru:
     sign_up: "Регистрация"
     tests: "К списку Тестов"
     admin_panel: "Панель администратора"
+    gists: "Посмотреть все Gist-ы"
   label:
     answer: "Ответы:"
     correct: "Верный ответ?"
@@ -103,3 +105,8 @@ ru:
     of: "из"
   placeholder:
     email: "Введите Email"
+  gist:
+    description: "Вопрос %{title} из TestGuru"
+    success: "Gist %{link} успешно сохранен"
+    failure: "Во время сохранения gist произошла ошибка"
+    button: "Сохранить в Gist"

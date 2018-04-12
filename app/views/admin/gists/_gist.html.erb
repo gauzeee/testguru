@@ -1,0 +1,5 @@
+<tr>
+  <td><%= link_to gist.question.body.truncate(25), admin_question_path(gist.question) %></td>
+  <td><%= link_to "https://gist.github.com/#{gist.link}" %></td>
+  <td><%= gist.user.email %></td>
+</tr>
