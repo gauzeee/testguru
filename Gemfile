@@ -42,7 +42,7 @@ gem 'faraday'
 gem 'rails-i18n', '~> 5.0.0'
 
 #UI
-
+gem 'octicons_helper'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.0.0'
 

@@ -4,8 +4,12 @@
 
     <table class="table table-hover">
       <thead class="thead-inverse">
-        <tr>
-          <th><%= t('.title') %></th>
+        <tr class="sort-by-title pointer">
+          <th>
+            <%= t('.title') %>
+            <%= octicon 'arrow-up', class: 'text-success hide' %>
+            <%= octicon 'arrow-down', class: 'text-success hide' %>
+            </th>
           <th><%= t('.level') %></th>
           <th><%= t('.category') %></th>
           <th><%= t('.questions') %></th>

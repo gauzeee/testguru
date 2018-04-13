@@ -32,7 +32,9 @@
           </p>
 
           <p>
-            <%= f.label :password_confirmation %>
+            <%= f.label :password_confirmation, class: 'password-confirmation-label' %>
+            <%= octicon "thumbsup", class: 'text-success hide' %>
+            <%= octicon "thumbsdown", class: 'text-danger hide' %>
             <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
           </p>
 
