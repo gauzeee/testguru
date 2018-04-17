@@ -1,14 +1,14 @@
 <div class="row justify-content-center">
   <div class="col-12 col-md-6">
-    <% if resource.errors.present? %>
-  <div>
+    <% if resource.present? && resource.errors.any? %>
+  <%= content_tag :div, class: 'resource-errors', data: { resource_id: resource.id } do %>
     <h3><%= t('.header', count: resource.errors.count) %>:</h3>
     <ul>
       <% resource.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
     </ul>
-  </div>
+  <% end %>
 <% end %>
   </div>
 </div>

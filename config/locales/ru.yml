@@ -17,6 +17,8 @@ ru:
         other: "Обнаружено %{count} ошибки"
   admin:
     tests:
+      form_inline:
+        submit: "ОК"
       create:
         success: "Тест успешно создан"
       index:
@@ -96,6 +98,7 @@ ru:
     tests: "К списку Тестов"
     admin_panel: "Панель администратора"
     gists: "Посмотреть все Gist-ы"
+    cancel: "Отмена"
   label:
     answer: "Ответы:"
     correct: "Верный ответ?"

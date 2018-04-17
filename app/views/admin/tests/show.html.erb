@@ -18,6 +18,7 @@
       <%= render partial: 'admin/questions/question', collection: @test.questions %>
     </ol></tr>
 </table>
+<%= link_to t('links.edit'), edit_admin_test_path(@test), class: 'btn btn-primary mb-2' %> <br>
 <%= link_to t('links.new_question'), new_admin_test_question_path(@test), class: 'btn btn-primary' %> <br>
 <%= link_to t('links.back'), admin_tests_path, class: 'btn' %>
   </div>

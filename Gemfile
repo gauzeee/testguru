@@ -40,6 +40,7 @@ gem 'faraday'
 
 #LOCALIZTION
 gem 'rails-i18n', '~> 5.0.0'
+gem 'i18n-js'
 
 #UI
 gem 'octicons_helper'
