@@ -1,5 +1,5 @@
 <div class="row justify-content-center">
-  <div class="col-12 col-md-8 tests-table">
+  <div class="col-12 col-md-10 tests-table">
     <h1> <%= t('.header') %></h1>
 
     <p>
@@ -13,7 +13,11 @@
     <table class="table">
       <thead class="thead-inverse">
         <tr>
-          <th><%= t('.title') %></th>
+          <th class="sort-by-title pointer">
+            <%= t('.title') %>
+            <%= octicon 'arrow-up', class: 'text-success hide' %>
+            <%= octicon 'arrow-down', class: 'text-success hide' %>
+          </th>
           <th><%= t('.level') %></th>
           <th><%= t('.category') %></th>
           <th><%= t('.questions') %></th>
