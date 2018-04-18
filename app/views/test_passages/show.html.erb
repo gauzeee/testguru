@@ -9,9 +9,9 @@
           <%= t('label.of') %>
           <%= @test_passage.test.questions.size %>
         </div>
-        <div class="progress-bar mt-3 mb-3" data-test-progress="<%= progress_bar(@test_passage) %>">
+        <progress class="progress-bar mt-3 mb-3" value="<%= progress_bar(@test_passage) %>" max="100" data-test-progress="<%= progress_bar(@test_passage) %>">
           <%= progress_bar(@test_passage) %> %
-        </div>
+        </progress>
         <h3><%= @test_passage.current_question.body %></h3>
       </div>
     </div>
