@@ -14,4 +14,8 @@ module TestPassagesHelper
       t('test_passage.fail')
     end
   end
+
+  def progress_bar(test_passage)
+    test_passage.current_question_number*100/test_passage.test.questions.count
+  end
 end

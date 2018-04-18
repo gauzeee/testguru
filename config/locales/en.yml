@@ -46,6 +46,8 @@ en:
         other: "%{count} errors detected"
   admin:
     tests:
+      form_inline:
+        submit: "OK"
       create:
         success: "Test was successfully created"
       index:
@@ -111,7 +113,6 @@ en:
     pass: "Test passed"
   links:
     back: "Back"
-    edit: "Edit"
     delete: "Delete"
     show: "Show"
     confirm: "Are you sure?"
@@ -125,6 +126,8 @@ en:
     tests: "Back to Tests"
     admin_panel: "Admin Panel"
     gists: "Show Gists"
+    cancel: "Cancel"
+    edit: "Edit"
   label:
     answer: "Answers:"
     correct: "Correct:"
