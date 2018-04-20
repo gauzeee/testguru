@@ -99,6 +99,8 @@ ru:
     admin_panel: "Панель администратора"
     gists: "Посмотреть все Gist-ы"
     cancel: "Отмена"
+    feedback: "Оставить отзыв"
+    send: "Отправить"
   label:
     answer: "Ответы:"
     correct: "Верный ответ?"
@@ -106,6 +108,7 @@ ru:
     remember_me: "Запомнить меня"
     minpass: "Не менее %{length} символов"
     of: "из"
+    from: "Новый отзыв от: "
   placeholder:
     email: "Введите Email"
   gist:
@@ -113,3 +116,11 @@ ru:
     success: "Gist %{link} успешно сохранен"
     failure: "Во время сохранения gist произошла ошибка"
     button: "Сохранить в Gist"
+  feedbacks:
+    new:
+      header: "Будем рады получить от вас отзыв, "
+  mail:
+    feedback:
+      subject: "Сообщение от:"
+      sended: "Спасибо! Ваш отзыв успешно отправлен"
+      error: "Возникла ошибка при отправке"

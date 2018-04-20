@@ -5,6 +5,8 @@
       <%= t('hello') %>, <b><%= current_user.first_name %></b> |
       <% if current_user.is_a?(Admin) %>
         <%= link_to t('links.admin_panel'), admin_tests_path %> |
+      <% else %>
+        <%= link_to t('links.feedback'), new_feedback_path %> |
       <% end %>
       <%= link_to t('links.logout'), destroy_user_session_path, method: 'delete' %>
     <% else %>

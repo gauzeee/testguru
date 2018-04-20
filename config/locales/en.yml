@@ -128,6 +128,8 @@ en:
     gists: "Show Gists"
     cancel: "Cancel"
     edit: "Edit"
+    feedback: "Feedback"
+    send: "Send"
   label:
     answer: "Answers:"
     correct: "Correct:"
@@ -135,6 +137,7 @@ en:
     remember_me: "Remember me"
     minpass: "%{length} characters minimum"
     of: "of"
+    from: "New Feedback From: "
   placeholder:
     email: "Enter Email"
   gist:
@@ -142,4 +145,12 @@ en:
     success: "Gist %{link} successfully saved"
     failure: "An error occured while saving gist"
     link: "Gist Question"
+  feedbacks:
+    new:
+      header: "Write your feedback, "
+  mail:
+    feedback:
+      subject: "Mail from:"
+      sended: "Your feddback has been send"
+      error: "There are some issues"
 
