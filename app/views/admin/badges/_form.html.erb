@@ -1,0 +1,25 @@
+<%= form_with model: [:admin, @badge], local: true do |form| %>
+  <%= render 'shared/errors', resource: @badge %>
+
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+
+  <p>
+   <%= form.label :badge_image %><br>
+    <%= form.text_field :badge_image %>
+  </p>
+
+  <p>
+    <%= form.label :rule %><br>
+    <%= form.select :rule, options_for_select([
+      ['all_on_category_backend'],
+      ['first_try'],
+      ['all_on_easy_level'],
+      ['all_on_advanced_level']
+      ]) %>
+  </p>
+
+  <p><%= form.submit %></p>
+<% end %>
