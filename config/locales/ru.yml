@@ -39,6 +39,9 @@ ru:
         header: "Новый ответ"
       show:
         header: "Ответы"
+    badges:
+      create:
+        success: "Бейдж успешно создан"
   helpers:
     label:
       test:
@@ -101,6 +104,8 @@ ru:
     cancel: "Отмена"
     feedback: "Оставить отзыв"
     send: "Отправить"
+    badges: "Значки"
+    new_badge: "Новый значок"
   label:
     answer: "Ответы:"
     correct: "Верный ответ?"

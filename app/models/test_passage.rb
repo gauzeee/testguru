@@ -5,8 +5,11 @@ class TestPassage < ApplicationRecord
 
   before_save :set_question
 
+  scope :passed, -> { where ('result >= 85') }
+
   def accept!(answer_ids)
     self.correct_questions += 1 if correct_answer?(answer_ids)
+    self.result = self.result_points
     save!
   end
 
@@ -20,6 +23,10 @@ class TestPassage < ApplicationRecord
 
   def test_passed?
     result_points >= 85
+  end
+
+  def test_done?
+    completed? && test_passed?
   end
 
   private
