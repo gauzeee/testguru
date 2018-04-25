@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180411094634) do
+ActiveRecord::Schema.define(version: 20180420135334) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "admins", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -30,6 +33,14 @@ ActiveRecord::Schema.define(version: 20180411094634) do
     t.string "title", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "feedbacks", force: :cascade do |t|
+    t.text "body"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_feedbacks_on_user_id"
   end
 
   create_table "gists", force: :cascade do |t|
@@ -73,6 +84,7 @@ ActiveRecord::Schema.define(version: 20180411094634) do
     t.integer "author_id", default: 1
     t.index ["author_id"], name: "index_tests_on_author_id"
     t.index ["category_id"], name: "index_tests_on_category_id"
+    t.index ["title", "level"], name: "index_tests_on_title_and_level", unique: true
   end
 
   create_table "users", force: :cascade do |t|
@@ -101,4 +113,7 @@ ActiveRecord::Schema.define(version: 20180411094634) do
     t.index ["type"], name: "index_users_on_type"
   end
 
+  add_foreign_key "feedbacks", "users"
+  add_foreign_key "questions", "tests", on_delete: :cascade
+  add_foreign_key "test_passages", "tests", on_delete: :cascade
 end

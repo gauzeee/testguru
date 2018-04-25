@@ -3,17 +3,14 @@ categories = Category.create!([
   { title: 'Backend'},
   { title: 'Frameworks' }])
 
-users = User.create!([
-  { name: 'admin', email: 'admin@testguru.test', password: 'password'},
-  { name: 'user1', email: 'user1@testguru.test', password: 'password'}])
 
 tests = Test.create!([
-  { title: 'HTML', level: 0, category_id: categories[0].id, author_id: users[0].id },
-  { title: 'CSS', level: 0, category_id: categories[0].id, author_id: users[0].id },
-  { title: 'Ruby', level: 2, category_id: categories[1].id, author_id: users[0].id },
-  { title: 'Swift', level: 1, category_id: categories[1].id, author_id: users[0].id },
-  { title: 'Rails', level: 3, category_id: categories[2].id, author_id: users[0].id },
-  { title: 'Node', level: 2, category_id: categories[2].id, author_id: users[1].id }])
+  { title: 'HTML', level: 0, category_id: categories[0].id, author_id: User.first.id },
+  { title: 'CSS', level: 0, category_id: categories[0].id, author_id: User.first.id },
+  { title: 'Ruby', level: 2, category_id: categories[1].id, author_id: User.first.id },
+  { title: 'Swift', level: 1, category_id: categories[1].id, author_id: User.first.id },
+  { title: 'Rails', level: 3, category_id: categories[2].id, author_id: User.first.id },
+  { title: 'Node', level: 2, category_id: categories[2].id, author_id: User.first.id }])
 
 questions = Question.create([
   { body: 'Is HTML for web?', test_id: tests[0].id },
@@ -37,9 +34,3 @@ Answer.create!([
   { body: 'English', question_id: questions[5].id },
   { body: 'JavaScript', correct: true, question_id: questions[5].id }])
 
-TestPassage.create!([
-  {user_id: 1, test_id: 1},
-  {user_id: 1, test_id: 2},
-  {user_id: 2, test_id: 3},
-  {user_id: 2, test_id: 6},
-  ])
