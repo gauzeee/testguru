@@ -16,4 +16,8 @@ class Test < ApplicationRecord
     joins(:category).where(categories: { title: category_title }).
     order(title: :desc) }
   scope :passed, -> { joins(:test_passages).merge(TestPassage.passed).distinct }
+
+   def self.transform(parameter)
+    self.send("#{parameter}")
+  end
 end

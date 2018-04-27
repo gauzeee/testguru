@@ -10,25 +10,20 @@ class BadgeService
   end
 
   def get_badge
-    Badge.all.each do |badge|
-      case badge.rule
-      when 'first_try'
-        @user.badges << badge if first_try?
-      when 'all_on_category_backend'
-        @user.badges << badge if all_on_category_backend? && got_badge?(badge)
-      when 'all_on_easy_level'
-        @user.badges << badge if all_on_easy_level? && got_badge?(badge)
-      when 'all_on_advanced_level'
-        @user.badges << badge if all_on_advanced_level? && got_badge?(badge)
-      end
+    Badge.find_each do |badge|
+        @user.badges << badge if self.send("#{badge.rule}?", badge.parameter) && no_badge?(badge)
     end
   end
 
-  def got_badge?(badge)
-    !@user.badges.include?(badge)
+  def no_badge?(badge)
+    if badge.rule == 'first_try'
+      true
+    else
+      !@user.badges.include?(badge)
+    end
   end
 
-  def first_try?
+  def first_try?(parameter)
     @user.tests.where(id: @test.id).count == 1
   end
 
@@ -36,20 +31,30 @@ class BadgeService
     @user.test_passages.passed.pluck(:test_id).uniq
   end
 
-  def all_on_category_backend?
-    all_backend_tests = Test.title_by_category('Backend').ids.uniq
-    (all_backend_tests - user_passed_tests).empty?
+  def parameter_is_level?(parameter)
+    parameter == 'easy' || parameter == 'advanced' || parameter == 'hard'
   end
 
-  def all_on_easy_level?
-    all_easy_level_tests = Test.easy.ids.uniq
-    (all_easy_level_tests - user_passed_tests).empty?
+  def all_on_level?(parameter)
+    if parameter_is_level?(parameter)
+      all_level_tests = Test.transform(parameter).ids.uniq
+      (all_level_tests - user_passed_tests).empty?
+    else
+      return
+    end
   end
 
-  def all_on_advanced_level?
-    all_advanced_level_tests = Test.advanced.ids.uniq
-    (all_advanced_level_tests - user_passed_tests).empty?
+  def parameter_is_category?(parameter)
+    parameter == 'backend' || parameter == 'frontend' || parameter == 'frameworks'
   end
 
+  def all_on_category?(parameter)
+    if parameter_is_category?(parameter)
+      all_category_tests = Test.title_by_category(parameter.capitalize).ids.uniq
+      (all_category_tests - user_passed_tests).empty?
+    else
+      return
+    end
+  end
 end
 

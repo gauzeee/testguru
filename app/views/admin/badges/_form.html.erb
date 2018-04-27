@@ -13,12 +13,12 @@
 
   <p>
     <%= form.label :rule %><br>
-    <%= form.select :rule, options_for_select([
-      ['all_on_category_backend'],
-      ['first_try'],
-      ['all_on_easy_level'],
-      ['all_on_advanced_level']
-      ]) %>
+    <%= form.collection_select :rule, Badge.all, :rule, :rule, prompt: true, class: 'c-select' %>
+  </p>
+
+  <p>
+    <%= form.label :parameter %> <br>
+    <%= form.text_field :parameter %>
   </p>
 
   <p><%= form.submit %></p>
