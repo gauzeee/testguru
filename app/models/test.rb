@@ -16,8 +16,7 @@ class Test < ApplicationRecord
     joins(:category).where(categories: { title: category_title }).
     order(title: :desc) }
   scope :passed, -> { joins(:test_passages).merge(TestPassage.passed).distinct }
-
-   def self.transform(parameter)
-    self.send("#{parameter}")
-  end
+  scope :by_level, -> (parameter) { levels =
+                      { easy: 0..1, advanced: 2..4, hard: 5..Float::INFINITY }
+                      where(level: levels[parameter.to_sym]) }
 end

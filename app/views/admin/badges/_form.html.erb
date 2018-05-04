@@ -13,7 +13,7 @@
 
   <p>
     <%= form.label :rule %><br>
-    <%= form.collection_select :rule, Badge.all, :rule, :rule, prompt: true, class: 'c-select' %>
+    <%= form.select :rule, options_for_select(Badge.rules) %>
   </p>
 
   <p>

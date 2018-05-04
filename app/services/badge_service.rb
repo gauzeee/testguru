@@ -11,7 +11,7 @@ class BadgeService
 
   def get_badge
     Badge.find_each do |badge|
-        @user.badges << badge if self.send("#{badge.rule}?", badge.parameter) && no_badge?(badge)
+      @user.badges << badge if self.send("#{badge.rule}?", badge.parameter) && no_badge?(badge)
     end
   end
 
@@ -28,33 +28,17 @@ class BadgeService
   end
 
   def user_passed_tests
-    @user.test_passages.passed.pluck(:test_id).uniq
+    @passed_tests_ids ||= @user.test_passages.passed.pluck(:test_id).uniq
   end
 
-  def parameter_is_level?(parameter)
-    parameter == 'easy' || parameter == 'advanced' || parameter == 'hard'
+  def all_on_level?(level)
+    all_level_tests = Test.by_level(level).ids.uniq
+    (all_level_tests - user_passed_tests).empty? if all_level_tests
   end
 
-  def all_on_level?(parameter)
-    if parameter_is_level?(parameter)
-      all_level_tests = Test.transform(parameter).ids.uniq
-      (all_level_tests - user_passed_tests).empty?
-    else
-      return
-    end
-  end
-
-  def parameter_is_category?(parameter)
-    parameter == 'backend' || parameter == 'frontend' || parameter == 'frameworks'
-  end
-
-  def all_on_category?(parameter)
-    if parameter_is_category?(parameter)
-      all_category_tests = Test.title_by_category(parameter.capitalize).ids.uniq
-      (all_category_tests - user_passed_tests).empty?
-    else
-      return
-    end
+  def all_on_category?(category)
+    all_category_tests = Test.title_by_category(category.capitalize).ids.uniq
+    (all_category_tests - user_passed_tests).empty?
   end
 end
 
