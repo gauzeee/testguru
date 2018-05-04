@@ -29,6 +29,18 @@ class TestPassage < ApplicationRecord
     completed? && test_passed?
   end
 
+  def time_left
+    (expires_at - Time.current).to_i
+  end
+
+  def stop!
+    self.current_question = nil
+  end
+
+  def time_over?
+    expires_at < Time.now
+  end
+
   private
 
   def correct_answer?(answer_ids)
@@ -56,5 +68,9 @@ class TestPassage < ApplicationRecord
 
   def next_question
     test.questions.order(:id).where('id > ?', current_question.id).first
+  end
+
+  def expires_at
+    created_at + test.timer.minutes
   end
 end

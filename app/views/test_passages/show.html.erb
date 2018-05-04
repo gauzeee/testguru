@@ -9,6 +9,11 @@
           <%= t('label.of') %>
           <%= @test_passage.test.questions.size %>
         </div>
+        <div>
+          <% if @test_passage.test.timer_exists? %>
+            <%= t('label.timer') %> <%= content_tag :span, '', class: 'timer', data: { timer: @test_passage.time_left } %>
+          <% end %>
+        </div>
         <progress class="progress-bar mt-3 mb-3" value="<%= progress_bar(@test_passage) %>" max="100" data-test-progress="<%= progress_bar(@test_passage) %>">
           <%= progress_bar(@test_passage) %> %
         </progress>
