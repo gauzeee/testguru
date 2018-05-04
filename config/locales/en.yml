@@ -68,6 +68,9 @@ en:
         header: "New Answer"
       show:
         header: "Answers"
+    badges:
+      create:
+        success: "Badge was successfully created"
   helpers:
     label:
       user:
@@ -130,6 +133,8 @@ en:
     edit: "Edit"
     feedback: "Feedback"
     send: "Send"
+    badges: "Badges"
+    new_badge: "New Badge"
   label:
     answer: "Answers:"
     correct: "Correct:"
