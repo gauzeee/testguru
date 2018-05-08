@@ -48,6 +48,7 @@ ru:
         title: "Название"
         level: "Уровень"
         category_id: "Категория"
+        timer: "Время на прохождение"
       user:
         first_name: "Имя"
         last_name: "Фамилия"
@@ -114,6 +115,7 @@ ru:
     minpass: "Не менее %{length} символов"
     of: "из"
     from: "Новый отзыв от: "
+    timer: "Осталось времени"
   placeholder:
     email: "Введите Email"
   gist:

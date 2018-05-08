@@ -19,4 +19,8 @@ class Test < ApplicationRecord
   scope :by_level, -> (parameter) { levels =
                       { easy: 0..1, advanced: 2..4, hard: 5..Float::INFINITY }
                       where(level: levels[parameter.to_sym]) }
+
+  def timer_exists?
+    timer && timer > 0
+  end
 end
